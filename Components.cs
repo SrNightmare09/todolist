@@ -22,8 +22,6 @@ public class Components {
     public Color bgColor = ColorTranslator.FromHtml("#0F1821");
     public Color textColor = ColorTranslator.FromHtml("#20C68D");
 
-    public int count = 1;
-
     public string ID = string.Empty;
     public string TASK = string.Empty;
     public string DESCRIPTION = string.Empty;

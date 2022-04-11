@@ -235,7 +235,7 @@ public class TodoList : Form {
             component.taskdesc.Text = "No description";
         }
 
-        component.ID = component.count.ToString();
+        component.ID = "a";
         component.TASK = component.tasktitle.Text.ToString().Trim();
         component.DESCRIPTION = component.taskdesc.Text.ToString().Trim();
 
@@ -243,7 +243,6 @@ public class TodoList : Form {
 
         component.tasktitle.Text = string.Empty;
         component.taskdesc.Text = string.Empty;
-        component.count++;
 
     }
 
@@ -255,9 +254,10 @@ public class TodoList : Form {
 
         string cell = component.table.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
+
         if (cell == "Delete") {
 
-            component.table.Rows.RemoveAt(e.RowIndex);
+            component.table.Rows.RemoveAt(component.table.SelectedCells[e.RowIndex].RowIndex);
 
         }
 
