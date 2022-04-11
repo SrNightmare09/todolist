@@ -24,8 +24,8 @@ public class Components {
 
     public int count = 1;
 
-    public string ID { get; set; }
-    public string TASK { get; set; }
-    public string DESCRIPTION { get; set; }
+    public string ID = string.Empty;
+    public string TASK = string.Empty;
+    public string DESCRIPTION = string.Empty;
 
 }
