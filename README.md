@@ -6,12 +6,12 @@ A list maker which can be used for managing tasks. Tasks can be added and remove
 
 ## Table of Contents
 
-- [Features](https://github.com/SrNightmare09/todolist/blob/master/README.md#features)
-- [Dependencies](https://github.com/SrNightmare09/crypto-prediction#resources)
-- [Bugs]()
-- [Upcoming Features](https://github.com/SrNightmare09/crypto-prediction#upcoming-features)
-- [Contributing](https://github.com/SrNightmare09/todolist/edit/master/README.md#contributing)
-- [MIT License](https://github.com/SrNightmare09/todolist/edit/master/README.md#license)
+- [Features](https://github.com/SrNightmare09/todolist#features)
+- [Dependencies](https://github.com/SrNightmare09/todolist#dependencies)
+- [Bugs](https://github.com/SrNightmare09/todolist#bugs)
+- [Upcoming Features](https://github.com/SrNightmare09/todolist#upcoming-features)
+- [Contributing](https://github.com/SrNightmare09/todolist#contributing)
+- [MIT License](https://github.com/SrNightmare09/todolist#license)
 
 <hr>
 
@@ -32,7 +32,7 @@ None
 
 ## Bugs
 
-- Improper behaviour of Delete button
+- [Improper behaviour of Delete button](https://github.com/SrNightmare09/todolist/issues/3)
 
 <hr>
 
@@ -48,12 +48,12 @@ None
 
 Contributions are always welcome!
 
-See [`CONTRIBUTING.md`](https://github.com/SrNightmare09/todolist/blob/02fc5478d4de96e8df8bd95c05eb142a93e491eb/CONTRIBUTING.md) for ways to get started.
+See [`CONTRIBUTING.md`](https://github.com/SrNightmare09/todolist/blob/master/CONTRIBUTING.md) for ways to get started.
 
-Please adhere to this project's [`CODE OF CONDUCT`](https://github.com/SrNightmare09/todolist/blob/02fc5478d4de96e8df8bd95c05eb142a93e491eb/CODE_OF_CONDUCT.md)
+Please adhere to this project's [`CODE OF CONDUCT`](https://github.com/SrNightmare09/todolist/blob/master/CODE_OF_CONDUCT.md)
 
 <hr>
 
 ## License
 
-[MIT](https://github.com/SrNightmare09/todolist/blob/02fc5478d4de96e8df8bd95c05eb142a93e491eb/LICENSE)
+[MIT](https://github.com/SrNightmare09/todolist/blob/master/LICENSE)
