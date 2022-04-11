@@ -6,12 +6,11 @@ A list maker which can be used for managing tasks. Tasks can be added and remove
 
 ## Table of Contents
 
-- [Features](https://github.com/SrNightmare09/crypto-prediction#features)
-- [How It Works - The Gold Line vs Death Line Algorithm](https://github.com/SrNightmare09/crypto-prediction#how-it-works---the-gold-line-vs-death-line-algorithm)
+- [Features](https://github.com/SrNightmare09/todolist/edit/master/README.md#features)
 - [Resources](https://github.com/SrNightmare09/crypto-prediction#resources)
 - [Upcoming Features](https://github.com/SrNightmare09/crypto-prediction#upcoming-features)
-- [Contributing](https://github.com/SrNightmare09/crypto-prediction#contributing)
-- [MIT License](https://github.com/SrNightmare09/crypto-prediction#license)
+- [Contributing](https://github.com/SrNightmare09/todolist/edit/master/README.md#contributing)
+- [MIT License](https://github.com/SrNightmare09/todolist/edit/master/README.md#license)
 
 <hr>
 
