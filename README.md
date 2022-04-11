@@ -6,8 +6,9 @@ A list maker which can be used for managing tasks. Tasks can be added and remove
 
 ## Table of Contents
 
-- [Features](https://github.com/SrNightmare09/todolist/edit/master/README.md#features)
-- [Resources](https://github.com/SrNightmare09/crypto-prediction#resources)
+- [Features](https://github.com/SrNightmare09/todolist/blob/master/README.md#features)
+- [Dependencies](https://github.com/SrNightmare09/crypto-prediction#resources)
+- [Bugs]()
 - [Upcoming Features](https://github.com/SrNightmare09/crypto-prediction#upcoming-features)
 - [Contributing](https://github.com/SrNightmare09/todolist/edit/master/README.md#contributing)
 - [MIT License](https://github.com/SrNightmare09/todolist/edit/master/README.md#license)
@@ -22,6 +23,26 @@ A list maker which can be used for managing tasks. Tasks can be added and remove
 - [x] User-friendly GUI
 
 <hr>
+
+## Dependencies
+
+None
+
+<hr>
+
+## Bugs
+
+- Improper behaviour of Delete button
+
+<hr>
+
+## Upcoming Features
+
+- [ ] Different color backgrounds
+- [ ] Option to edit tasks
+- [ ] Usage of SQL database for storing tasks
+- [ ] Smoother usage
+- [ ] Build as complete application with easy installation
 
 ## Contributing
 
