@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Threading;
 
-public class Trello : Form {
+public class TodoList : Form {
 
     private Form form = new Form();
     private Panel panel = new Panel();
@@ -33,10 +33,10 @@ public class Trello : Form {
     [STAThread]
     static void Main () {
         Application.ThreadException += new ThreadExceptionEventHandler(ThreadException);
-        Application.Run(new Trello());
+        Application.Run(new TodoList());
     }
 
-    public Trello() {
+    public TodoList() {
         SetupWindow();
         AddComponents();
         SetupTable();
@@ -47,7 +47,7 @@ public class Trello : Form {
     #region Rendering
     private void SetupWindow() {
 
-        form.Text = "Trello++";
+        form.Text = "TodoList";
         form.FormBorderStyle = FormBorderStyle.FixedSingle;
         form.StartPosition = FormStartPosition.CenterScreen;
         form.Size = new Size(700, 700);
