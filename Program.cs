@@ -45,7 +45,7 @@ public class TodoList : Form {
         component.newTaskButton.AutoSize = true;
         component.newTaskButton.Location = new Point(20, 20);
 
-        component.newTaskButton.Click += new EventHandler(New_Task);
+        component.newTaskButton.Click += new EventHandler(NewTaskButton_Click);
         #endregion
 
         #region Add Task Panel
@@ -117,7 +117,7 @@ public class TodoList : Form {
         component.addTaskButton.AutoSize = true;
         component.addTaskButton.Location = new Point(245, 170);
 
-        component.addTaskButton.Click += new EventHandler(Add_Task);
+        component.addTaskButton.Click += new EventHandler(AddTaskButton_Click);
         #endregion
 
         #region Exit Button
@@ -210,20 +210,20 @@ public class TodoList : Form {
 
         component.table.Rows.Add(row);
 
-        component.table.CellMouseEnter += new DataGridViewCellEventHandler(Delete_MouseHover);
-        component.table.CellMouseLeave += new DataGridViewCellEventHandler(Delete_MouseLeave);
+        component.table.CellMouseEnter += new DataGridViewCellEventHandler(DeleteButton_MouseHover);
+        component.table.CellMouseLeave += new DataGridViewCellEventHandler(DeleteButton_MouseLeave);
     }
     #endregion
 
     #region Event Handlers
-    private void New_Task(object sender, EventArgs e) {
+    private void NewTaskButton_Click(object sender, EventArgs e) {
 
         component.panel.Visible = true;
         component.suggestion1.Visible = false;
 
     }
 
-    private void Add_Task(object sender, EventArgs e) {
+    private void AddTaskButton_Click(object sender, EventArgs e) {
 
         if (component.tasktitle.Text.ToString().Trim() == string.Empty) {
             MessageBox.Show("Warning", "Title is a required field");
@@ -246,11 +246,11 @@ public class TodoList : Form {
 
     }
 
+    private void ExitButton_Click(object sender, EventArgs e) => component.panel.Visible = false;
     private void ExitButton_MouseHover(object sender, EventArgs e) => component.exitButton.BackColor = ColorTranslator.FromHtml("#E81022");
     private void ExitButton_MouseLeave(object sender, EventArgs e) => component.exitButton.BackColor = component.bgColor;
-    private void ExitButton_Click(object sender, EventArgs e) => component.panel.Visible = false;
 
-    private void Delete_MouseHover(object sender, DataGridViewCellEventArgs e) {
+    private void DeleteButton_MouseHover(object sender, DataGridViewCellEventArgs e) {
 
         string cell = component.table.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
@@ -261,7 +261,7 @@ public class TodoList : Form {
 
     }
 
-    private void Delete_MouseLeave(object sender, DataGridViewCellEventArgs e) {
+    private void DeleteButton_MouseLeave(object sender, DataGridViewCellEventArgs e) {
 
         string cell = component.table.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
