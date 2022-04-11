@@ -212,6 +212,7 @@ public class TodoList : Form {
 
         component.table.CellMouseEnter += new DataGridViewCellEventHandler(DeleteButton_MouseHover);
         component.table.CellMouseLeave += new DataGridViewCellEventHandler(DeleteButton_MouseLeave);
+        component.table.CellClick += new DataGridViewCellEventHandler(DeleteButton_Click);
     }
     #endregion
 
@@ -249,6 +250,18 @@ public class TodoList : Form {
     private void ExitButton_Click(object sender, EventArgs e) => component.panel.Visible = false;
     private void ExitButton_MouseHover(object sender, EventArgs e) => component.exitButton.BackColor = ColorTranslator.FromHtml("#E81022");
     private void ExitButton_MouseLeave(object sender, EventArgs e) => component.exitButton.BackColor = component.bgColor;
+
+    private void DeleteButton_Click(object sender, DataGridViewCellEventArgs e) {
+
+        string cell = component.table.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+        if (cell == "Delete") {
+
+            component.table.Rows.RemoveAt(e.RowIndex);
+
+        }
+
+    }
 
     private void DeleteButton_MouseHover(object sender, DataGridViewCellEventArgs e) {
 
