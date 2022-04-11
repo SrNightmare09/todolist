@@ -172,6 +172,7 @@ public class TodoList : Form {
     }
     #endregion
 
+    #region Table
     private void SetupTable() {
 
         component.form.Controls.Add(component.table);
@@ -212,7 +213,9 @@ public class TodoList : Form {
         component.table.CellMouseEnter += new DataGridViewCellEventHandler(Delete_MouseHover);
         component.table.CellMouseLeave += new DataGridViewCellEventHandler(Delete_MouseLeave);
     }
+    #endregion
 
+    #region Event Handlers
     private void New_Task(object sender, EventArgs e) {
 
         component.panel.Visible = true;
@@ -268,9 +271,12 @@ public class TodoList : Form {
         }
 
     }
+    #endregion
 
+    #region Error Handlers
     static void ThreadException(object sender, ThreadExceptionEventArgs e) {
         return;
     }
+    #endregion
 
 }
