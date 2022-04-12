@@ -8,7 +8,7 @@ public partial class Connection {
     public SqlDataReader reader;
     public SqlDataAdapter adapter = new SqlDataAdapter();
 
-    public readonly string connectionString = @"";
+    public readonly string connectionString = CONNECTION_STRING;
 
     public string dbName = "TodoList";
     public string tableName = "Tasks";
