@@ -3,7 +3,7 @@
 A list maker which can be used for managing tasks. Tasks can be added and removed as well. App made with implementation of Winforms and Database
 
 <p align = "center">
-<img src = "images/app-window.png" height=600>
+<img src = "assets/app-window.png" height=600>
 </p>
   
 ###### *Image: Preview of the app*
