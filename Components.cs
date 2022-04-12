@@ -22,7 +22,7 @@ public class Components {
     public Color bgColor = ColorTranslator.FromHtml("#0F1821");
     public Color textColor = ColorTranslator.FromHtml("#20C68D");
 
-    public string ID = string.Empty;
+    public int ID = 1;
     public string TASK = string.Empty;
     public string DESCRIPTION = string.Empty;
 
