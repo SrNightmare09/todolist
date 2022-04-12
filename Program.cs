@@ -2,10 +2,12 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Threading;
+using System.Data.SqlClient;
 
 public class TodoList : Form {
 
     Components component = new Components();
+    DatabaseFunctions db = new DatabaseFunctions();
 
     [STAThread]
     static void Main () {
@@ -16,9 +18,10 @@ public class TodoList : Form {
     public TodoList() {
         SetupWindow();
         AddComponents();
-        SetupTable();
+        db.CreateDatabase();
+        db.CreateTable();
         RenderWindow();
-        UpdateTable();
+        ShowTable(); // update
     }
 
     #region Rendering
@@ -173,46 +176,13 @@ public class TodoList : Form {
     #endregion
 
     #region Table
-    private void SetupTable() {
 
-        component.form.Controls.Add(component.table);
-
-        component.table.ColumnCount = 4;
-
-        component.table.Name = "Table";
-        component.table.Location = new Point(20, 60);
-        component.table.Width = 645;
-        component.table.Height = 350;
-
-        component.table.GridColor = component.bgColor;
-        component.table.BackgroundColor = component.bgColor;
-        component.table.BorderStyle = BorderStyle.None;
-
-        component.table.RowHeadersVisible = false;
-        component.table.ReadOnly = true;
-        component.table.AllowUserToResizeColumns = false;
-        component.table.AllowUserToResizeRows = false;
-        component.table.AllowUserToAddRows = false;
-        component.table.AllowDrop = false;
-
-        string[] columns = { "S.No", "Task", "Description", "Click to remove" };
-        for (int i = 0; i < columns.Length; i++) {
-            component.table.Columns[i].Name = columns[i];
-            component.table.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-        }
-
-    }
-
-    private void UpdateTable() {
-
-        string[] row = {component.ID, component.TASK, component.DESCRIPTION, "Delete"};
-        component.table.Columns["Click to remove"].DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#E81022");
-
-        component.table.Rows.Add(row);
+    private void ShowTable() {
 
         component.table.CellMouseEnter += new DataGridViewCellEventHandler(DeleteButton_MouseHover);
         component.table.CellMouseLeave += new DataGridViewCellEventHandler(DeleteButton_MouseLeave);
         component.table.CellClick += new DataGridViewCellEventHandler(DeleteButton_Click);
+
     }
     #endregion
 
@@ -226,6 +196,7 @@ public class TodoList : Form {
 
     private void AddTaskButton_Click(object sender, EventArgs e) {
 
+
         if (component.tasktitle.Text.ToString().Trim() == string.Empty) {
             MessageBox.Show("Warning", "Title is a required field");
             return;
@@ -235,11 +206,12 @@ public class TodoList : Form {
             component.taskdesc.Text = "No description";
         }
 
-        component.ID = (component.table.RowCount + 1).ToString();
+        component.ID = component.table.RowCount + 1;
         component.TASK = component.tasktitle.Text.ToString().Trim();
         component.DESCRIPTION = component.taskdesc.Text.ToString().Trim();
 
-        UpdateTable();
+        db.AddValues(component.TASK, component.DESCRIPTION);
+        ShowTable();
 
         component.tasktitle.Text = string.Empty;
         component.taskdesc.Text = string.Empty;
